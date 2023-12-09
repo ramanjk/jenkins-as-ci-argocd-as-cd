@@ -16,7 +16,7 @@ pipeline {
       steps {
         sh 'ls -ltr'
         // build the project and create a JAR file
-        sh 'cd CI && mvn clean install package'
+        sh 'cd CI && mvn  install && mvn clean install spring-boot:repackage'
       }
     }
     stage('Static Code Analysis') {
