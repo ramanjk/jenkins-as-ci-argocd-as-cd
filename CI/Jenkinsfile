@@ -57,7 +57,7 @@ pipeline {
                     git config user.name "ramanjk"
                     BUILD_NUMBER=${BUILD_NUMBER}
                     bash CD/build.sh 
-                    git add CD/deployment.yml
+                    git add CD/deployment.yaml
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
                     git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
                 '''
