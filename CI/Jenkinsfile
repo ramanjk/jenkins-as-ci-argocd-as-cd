@@ -8,8 +8,8 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        //sh 'echo passed'
-        git branch: 'main', url: 'https://github.com/ramanjk/jenkins-as-ci-argocd-as-cd.git'
+        sh 'echo passed'
+        //git branch: 'main', url: 'https://github.com/ramanjk/jenkins-as-ci-argocd-as-cd.git'
       }
     }
     stage('Build and Test') {
